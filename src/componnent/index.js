@@ -6,7 +6,7 @@ import L from 'leaflet';
 import React from 'react';
 import { useLeafletContext, createPathComponent } from '@react-leaflet/core';
 
-export const MarkerCluster = React.memo(createPathComponent(({ children: _, ...props }) => {
+export const MarkerMuster = React.memo(createPathComponent(({ children: _, ...props }) => {
     const context = useLeafletContext();
 
     const options = {

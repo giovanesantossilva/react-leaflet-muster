@@ -4,7 +4,7 @@
     "private": false,
     "description": "A modern study React wrapper of marker cluster for react-leaflet",
     "author": "Giovane Santos <giovanesantos1999@gmail.com>",
-    "license": "MIT",
+    "license": "ISC",
     "main": "dist/index.min.js",
     "scripts": {
         "size": "du -hs dist/",
@@ -17,7 +17,10 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/giovanesantossilva/react-leaflet-cluster"
+        "url": "https://github.com/giovanesantossilva/react-leaflet-muster.git"
+    },
+    "bugs": {
+        "url": "https://github.com/giovanesantossilva/react-leaflet-muster/issues"
     },
     "files": [
         "dist",

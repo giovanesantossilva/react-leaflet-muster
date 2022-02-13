@@ -5,7 +5,7 @@ import { Icon } from 'leaflet';
 import { render  } from "react-dom";
 import { MapContainer, TileLayer, Marker } from "react-leaflet";
 
-import { MarkerCluster } from "../src/";
+import { MarkerMuster } from "../src/";
 
 const position = [-22.2108112, -49.6771926];
 
@@ -19,11 +19,14 @@ const App = () => {
             <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <MarkerCluster>
+            <MarkerMuster>
                 <Marker position={[-22.2108112, -49.6771926]} icon={icon}/>
                 <Marker position={[-22.2108112, -49.6771926]} icon={icon}/>
                 <Marker position={[-22.2108112, -49.6771926]} icon={icon}/>
-            </MarkerCluster>
+                <Marker position={[-22.2108112, -49.6771926]} icon={icon}/>
+                <Marker position={[-22.2108112, -49.6771926]} icon={icon}/>
+                <Marker position={[-21.210309, -47.647063]} icon={icon}/>
+            </MarkerMuster>
         </MapContainer>
     )
 }
