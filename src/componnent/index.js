@@ -1,10 +1,10 @@
-import 'leaflet.markercluster';
-import 'leaflet.markercluster/dist/MarkerCluster.css';
-import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
-
 import L from 'leaflet';
 import React from 'react';
 import { useLeafletContext, createPathComponent } from '@react-leaflet/core';
+
+import 'leaflet.markercluster';
+import 'leaflet.markercluster/dist/MarkerCluster.css';
+import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
 
 export const MarkerMuster = React.memo(createPathComponent(({ children: _, ...props }) => {
     const context = useLeafletContext();
