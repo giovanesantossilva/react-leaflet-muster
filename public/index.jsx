@@ -5,7 +5,7 @@ import { Icon } from 'leaflet';
 import { render  } from "react-dom";
 import { MapContainer, TileLayer, Marker } from "react-leaflet";
 
-import { MarkerMuster } from "../src/";
+import { MarkerMuster } from "../src/Muster";
 
 const position = [-22.2108112, -49.6771926];
 

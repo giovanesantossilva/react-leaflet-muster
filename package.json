@@ -12,8 +12,8 @@
         "clean": "rm -rf dist",
         "start": "webpack serve --progress",
         "build:babel": "babel src --out-dir dist",
-        "build:terser": "terser ./dist/index.js ./dist/componnent/index.js -o ./dist/index.min.js",
-        "build:clean": "rm -r ./dist/index.js ./dist/componnent",
+        "build:terser": "terser ./dist/Muster/index.js -o ./dist/index.min.js",
+        "build:clean": "rm -r ./dist/Muster",
         "build": "yarn clean && yarn build:babel && yarn build:terser && yarn build:clean"
     },
     "repository": {

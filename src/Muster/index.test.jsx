@@ -1,7 +1,7 @@
 import { MarkerMuster } from '.';
-import {MapContainer, Marker, TileLayer} from "react-leaflet";
+import {MapContainer, Marker} from "react-leaflet";
 
-import { cleanup, render, screen } from "@testing-library/react";
+import { cleanup, render } from "@testing-library/react";
 
 afterEach(cleanup);
 
