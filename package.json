@@ -1,0 +1,61 @@
+{
+    "name": "react-leaflet-muster",
+    "version": "1.0.0",
+    "private": false,
+    "description": "A modern study React wrapper of marker cluster for react-leaflet",
+    "author": "Giovane Santos <giovanesantos1999@gmail.com>",
+    "license": "MIT",
+    "main": "dist/index.min.js",
+    "scripts": {
+        "size": "du -hs dist/",
+        "clean": "rm -rf dist",
+        "start": "webpack serve --progress",
+        "build:babel": "babel src --out-dir dist",
+        "build:terser": "terser ./dist/index.js ./dist/componnent/index.js -o ./dist/index.min.js",
+        "build:clean": "rm -r ./dist/index.js ./dist/componnent",
+        "build": "yarn clean && yarn build:babel && yarn build:terser && yarn build:clean"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/giovanesantossilva/react-leaflet-cluster"
+    },
+    "files": [
+        "dist",
+        "LICENSE",
+        "README.md"
+    ],
+    "keywords": [
+        "react",
+        "leaflet",
+        "react-leaflet",
+        "markercluster",
+        "cluster"
+    ],
+    "peerDependencies": {
+        "leaflet": "^1.7.1",
+        "leaflet.markercluster": "^1.5.3",
+        "react-leaflet": "^3.2.5"
+    },
+    "dependencies": {
+        "@react-leaflet/core": "^1.1.1",
+        "leaflet": "^1.7.1",
+        "leaflet.markercluster": "^1.5.3",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-leaflet": "^3.2.5"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.17.0",
+        "@babel/core": "^7.17.2",
+        "@babel/preset-env": "^7.16.11",
+        "@babel/preset-react": "^7.16.7",
+        "babel-loader": "^8.2.3",
+        "css-loader": "^6.6.0",
+        "html-webpack-plugin": "^5.5.0",
+        "style-loader": "^3.3.1",
+        "terser": "^5.10.0",
+        "webpack": "^5.68.0",
+        "webpack-cli": "^4.9.2",
+        "webpack-dev-server": "^4.7.4"
+    }
+}
