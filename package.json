@@ -1,11 +1,12 @@
 {
     "name": "react-leaflet-muster",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "private": false,
     "description": "A modern study React wrapper of marker cluster for react-leaflet",
     "author": "Giovane Santos <giovanesantos1999@gmail.com>",
     "license": "ISC",
     "main": "dist/index.min.js",
+    "types": "src/Muster/index.d.ts",
     "scripts": {
         "test": "jest",
         "size": "du -hs dist/",
@@ -36,9 +37,9 @@
         "cluster"
     ],
     "peerDependencies": {
-        "leaflet": "^1.7.1",
-        "leaflet.markercluster": "^1.5.3",
-        "react-leaflet": "^3.2.5"
+        "leaflet": "^1.6.0",
+        "leaflet.markercluster": "^1.4.0",
+        "react-leaflet": "^3.0.0"
     },
     "dependencies": {
         "@react-leaflet/core": "^1.1.1",

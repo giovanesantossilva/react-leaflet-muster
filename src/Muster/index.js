@@ -6,7 +6,7 @@ import 'leaflet.markercluster';
 import 'leaflet.markercluster/dist/MarkerCluster.css';
 import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
 
-export const MarkerMuster = React.memo(createPathComponent(({ children: _, ...props }) => {
+export const MarkerMuster = createPathComponent(({ children: _, ...props }) => {
     const context = useLeafletContext();
 
     const options = {
@@ -15,7 +15,7 @@ export const MarkerMuster = React.memo(createPathComponent(({ children: _, ...pr
     const listeners = {};
 
     Object.entries(props).forEach(([propName, propValue]) => {
-        propName.startsWith('on')
+        !propName.startsWith('on')
             ? options[propName] = propValue
             : listeners[propName] = propValue;
     });
@@ -24,6 +24,7 @@ export const MarkerMuster = React.memo(createPathComponent(({ children: _, ...pr
 
     Object.entries(listeners).forEach(([eventAsProp, callback]) => {
         const event = `cluster${eventAsProp.substring(2).toLowerCase()}`;
+        console.log(event);
         cluster.on(event, callback);
     });
 
@@ -34,4 +35,4 @@ export const MarkerMuster = React.memo(createPathComponent(({ children: _, ...pr
             layerContainer: cluster
         }
     }
-}));
+});
