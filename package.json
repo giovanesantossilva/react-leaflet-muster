@@ -1,6 +1,6 @@
 {
     "name": "react-leaflet-muster",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "private": false,
     "description": "A modern study React wrapper of marker cluster for react-leaflet",
     "author": "Giovane Santos <giovanesantos1999@gmail.com>",
@@ -27,7 +27,9 @@
     "files": [
         "dist",
         "LICENSE",
-        "README.md"
+        "README.md",
+        "preview.png",
+        "src/Muster/index.d.ts"
     ],
     "keywords": [
         "react",
