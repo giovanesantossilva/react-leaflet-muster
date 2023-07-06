@@ -1,6 +1,5 @@
 import * as React from "react";
 
-
 interface LeafletMarkerClusterProps {
     showCoverageOnHover?: boolean,
     zoomToBoundsOnClick?: boolean,
@@ -20,10 +19,10 @@ interface LeafletMarkerClusterProps {
 }
 
 export interface MarkerMusterProps extends LeafletMarkerClusterProps {
-    onClick: Function,
-    onMouseOver: Function,
-    onMouseOut: Function,
-    onMouseMove: Function
+    onClick?: Function,
+    onMouseOver?: Function,
+    onMouseOut?: Function,
+    onMouseMove?: Function
 }
 
 export class MarkerMuster extends React.Component<MarkerMusterProps> {}

@@ -1,5 +1,5 @@
 import { MarkerMuster } from '.';
-import {MapContainer, Marker} from "react-leaflet";
+import { MapContainer, Marker } from "react-leaflet";
 
 import { cleanup, render } from "@testing-library/react";
 
@@ -14,7 +14,9 @@ describe('MarkerMuster Component', function () {
                 zoon={10}
                 center={position}
             >
-                <MarkerMuster>
+                <MarkerMuster
+                    onClick={e => console.log('onClick', e)}
+                >
                     <Marker position={position} />
                     <Marker position={position} />
                 </MarkerMuster>

@@ -19,7 +19,9 @@ const App = () => {
             <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <MarkerMuster>
+            <MarkerMuster
+                onClick={e => console.log('onClick', e)}
+            >
                 <Marker position={[-22.2108112, -49.6771926]} icon={icon}/>
                 <Marker position={[-22.2108112, -49.6771926]} icon={icon}/>
                 <Marker position={[-22.2108112, -49.6771926]} icon={icon}/>
