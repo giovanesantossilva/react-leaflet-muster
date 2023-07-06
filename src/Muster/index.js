@@ -5,12 +5,11 @@ import {
     createPathComponent,
     createElementObject
 } from '@react-leaflet/core';
-
 import 'leaflet.markercluster';
 import 'leaflet.markercluster/dist/MarkerCluster.css';
 import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
 
-export const MarkerMuster = createPathComponent((props, context) => {
+function getOptionsAndListeners(props) {
     const options = {
         removeOutsideVisibleBounds: true,
     };
@@ -20,10 +19,23 @@ export const MarkerMuster = createPathComponent((props, context) => {
             ? options[propName] = propValue
             : listeners[propName] = propValue;
     });
-    const cluster = new L.markerClusterGroup(options);
+    return { options, listeners };
+}
+
+function setListenerInMarkerClusterGroup(listeners, cluster) {
     Object.entries(listeners).forEach(([eventAsProp, callback]) => {
         const event = `cluster${eventAsProp.substring(2).toLowerCase()}`;
         cluster.on(event, callback);
     });
-    return createElementObject(cluster, extendContext(context, { layerContainer: cluster }));
+}
+
+export const MarkerMuster = createPathComponent((props, context) => {
+    console.log(props);
+    const { options, listeners } = getOptionsAndListeners(props);
+    const cluster = new L.markerClusterGroup(options);
+    setListenerInMarkerClusterGroup(listeners, cluster);
+    return createElementObject(
+        cluster,
+        extendContext(context, { layerContainer: cluster })
+    );
 });
