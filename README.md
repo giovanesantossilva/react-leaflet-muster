@@ -33,8 +33,16 @@ yarn add leaflet leaflet.markercluster react-leaflet
 
 ### Installation
 
+#### For React 17 with React Leaflet 3
+
 ```shell
-yarn add react-leaflet-muster
+yarn add react-leaflet-muster@ˆ1.0.3
+```
+
+#### For React 18 with React Leaflet 4
+
+```shell
+yarn add react-leaflet-muster@^2.0.0
 ```
 
 ### Usage
