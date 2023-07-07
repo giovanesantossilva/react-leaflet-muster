@@ -22,7 +22,8 @@ export interface MarkerMusterProps extends LeafletMarkerClusterProps {
     onClick?: Function,
     onMouseOver?: Function,
     onMouseOut?: Function,
-    onMouseMove?: Function
+    onMouseMove?: Function,
+    children: React.ReactNode
 }
 
 export class MarkerMuster extends React.Component<MarkerMusterProps> {}
