@@ -59,6 +59,8 @@ yarn add react-leaflet-muster@^2.0.0
 #### Full Example
 
 ```jsx
+import "leaflet/dist/leaflet.css";
+
 import { MarkerMuster } from "react-leaflet-muster";
 import { MapContainer, TileLayer, Marker } from "react-leaflet";
 
@@ -66,7 +68,7 @@ function Map() {
     return(
         <MapContainer
             zoom={14}
-            center={position}
+            center={[-22.2108112, -49.6771926]}
         >
             <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
